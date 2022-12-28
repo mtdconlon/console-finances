@@ -87,5 +87,41 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
+//Heading
+console.log("Financial Analysis")
+
+// Break
+console.log("----------------------------")
+
+//Total Months
 console.log("Total Months: " + finances.length);
 
+//Total ($)
+const arr = [finances.number];
+
+const sum = arr.reduce((accumulator, value) => {
+  return accumulator + value;
+}, 0);
+
+console.log("Total: $" + sum); // 👉️ 65
+
+//Average Change
+console.log("Average Change: $")
+
+//Greatest Increase In Profits
+console.log("Greatest Increase In Profits: ")
+
+//Greatest Decrease In Profits
+console.log("Greatest Decrease In Profits: ")
+
+
+
+
+
+// Financial Analysis
+// ----------------------------
+//Total Months: 86
+//Total: $38382578
+//Average  Change: $-2315.12
+//Greatest Increase in Profits: Feb-2012 ($1926159)
+//Greatest Decrease in Profits: Sep-2013 ($-2196167)

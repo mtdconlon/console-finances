@@ -88,9 +88,6 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
-// The total number of months included in the dataset.
-console.log("Total Months: "finances.length);
-
 // figure out how many rows there are in the finances variable
 // The net total amount of Profit/Losses over the entire period.
 // add everything together
@@ -106,14 +103,7 @@ console.log("Total Months: "finances.length);
 //   in a loop
 // The greatest decrease in losses (date and amount) over the entire period.
 
-// console output format!
-// Financial Analysis
-// ----------------------------
-//Total Months: 86
-//Total: $38382578
-//Average  Change: $-2315.12
-//Greatest Increase in Profits: Feb-2012 ($1926159)
-//Greatest Decrease in Profits: Sep-2013 ($-2196167)
+
 6: 26
 An example of calculating the average change over the first 5 months.
 var finances = [
