@@ -87,6 +87,8 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
+var financeTest = [2,3,4,5];
+
 //Heading
 console.log("Financial Analysis")
 
@@ -97,19 +99,38 @@ console.log("----------------------------")
 console.log("Total Months: " + finances.length);
 
 //Total ($)
-const arr = [finances.number];
-
-const sum = arr.reduce((accumulator, value) => {
-  return accumulator + value;
-}, 0);
-
-console.log("Total: $" + sum); // 👉️ 65
+var sum = 0;
+for(var i=0;i<finances.length;i++){
+    sum += finances[i][1];
+}
+console.log("Total: $" + sum);
 
 //Average Change
+// The average of the changes in Profit/Losses over the entire period.
+    // calculate each change by subtracting the previous month from this month
+    // You will need to track what the total change in profits is from month to month and then find the average.
+    // (Total/total number of changes)x===> total change/(months - 1)
+    // maybe put all the changes into an array? using .push(...) ?
+
 console.log("Average Change: $")
 
 //Greatest Increase In Profits
-console.log("Greatest Increase In Profits: ")
+function getMinMaxForLoop(arr){
+    let maximum = arr[0];
+    let minimum = arr[0];
+    for (let i = 0 ; i < arr.length; i++) {
+      if (maximum < arr[i]) {
+        maximum = arr[i];
+      } else {
+        minimum = arr[i];
+      }
+      
+    }
+   let result =  ([maximum, minimum]); 
+    return result;
+  };
+  console.log('Greatest Increase In Profits : ',getMinMaxForLoop([10,3,8,1,33]))
+
 
 //Greatest Decrease In Profits
 console.log("Greatest Decrease In Profits: ")

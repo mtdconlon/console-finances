@@ -89,19 +89,18 @@ var finances = [
 ];
 
 // figure out how many rows there are in the finances variable
+
 // The net total amount of Profit/Losses over the entire period.
-// add everything together
-// probably a loop
-// The average of the changes in Profit/Losses over the entire period.
-// calculate each change by subtracting the previous month from this month
-// You will need to track what the total change in profits is from month to month and then find the average.
-// (Total/total number of changes) ===> total change/(months - 1)
-// maybe put all the changes into an array? using .push(...) ?
+    // add everything together
+    // probably a loop
+
+
+
 // The greatest increase in profits (date and amount) over the entire period.
-// start with 0
-//   check the last increase. If it's bigger than 0, keep track of the new biggest one.
-//   in a loop
-// The greatest decrease in losses (date and amount) over the entire period.
+    // start with 0
+    //   check the last increase. If it's bigger than 0, keep track of the new biggest one.
+    //   in a loop
+    // The greatest decrease in losses (date and amount) over the entire period.
 
 
 6: 26
