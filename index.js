@@ -1,3 +1,4 @@
+//Data Set Starts
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
@@ -86,33 +87,33 @@ var finances = [
     ['Jan-2017', 138230],
     ['Feb-2017', 671099]
 ];
+//Data Set Ends
 
-var financeTest = [2, 3, 4, 5];
+//Heading Starts
+console.log("Financial Analysis");
+//Heading Ends
 
-//Heading
-console.log("Financial Analysis")
 
-// Break
-console.log("----------------------------")
+// Break Starts
+console.log("----------------------------");
+// Break Ends
 
-//Total Months
+
+//Total Months Starts
 console.log("Total Months: " + finances.length);
+//Total Months Ends
 
-//Total ($)
+
+//Total ($) Starts
 var sum = 0;
 for (var i = 0; i < finances.length; i++) {
     sum += finances[i][1];
 }
 console.log("Total: $" + sum);
+//Total ($) Ends
 
-//Average Change
-// The average of the changes in Profit/Losses over the entire period.
-// calculate each change by subtracting the previous month from this month
-// You will need to track what the total change in profits is from month to month and then find the average.
-// (Total/total number of changes)x===> total change/(months - 1)
-// maybe put all the changes into an array? using .push(...) ?
 
-//
+//Average Change Starts
 var financesChanges = [
     ['Jan-2010', 0],
     ['Feb-2010', 116771],
@@ -208,8 +209,10 @@ for (var i = 0; i < financesChanges.length; i++) {
 }
 
 console.log("Average Change: $" + cSum);
+//Average Change Ends
 
-//Greatest Increase In Profits
+
+//Greatest Increase In Profits Starts
 let minimum = Infinity;
 let maximum = -Infinity;
 
@@ -221,9 +224,12 @@ for (let number of financesChanges) {
   minimum = number;
 }
 
+//Greatest Increase In Profits Ends
+
 console.log("Greatest Increase In Profits: " + maximum);
-//Greatest Decrease In Profits
+//Greatest Decrease In Profits Starts
 console.log("Greatest Decrease In Profits: " + minimum);
+//Greatest Decrease In Profits Ends
 
 
 
