@@ -1,4 +1,3 @@
-console.log("hello world");
 var finances = [
     ['Jan-2010', 867884],
     ['Feb-2010', 984655],
@@ -88,50 +87,150 @@ var finances = [
     ['Feb-2017', 671099]
 ];
 
-// figure out how many rows there are in the finances variable
+var financeTest = [2, 3, 4, 5];
 
-// The net total amount of Profit/Losses over the entire period.
-    // add everything together
-    // probably a loop
+//Heading
+console.log("Financial Analysis")
+
+// Break
+console.log("----------------------------")
+
+//Total Months
+console.log("Total Months: " + finances.length);
+
+//Total ($)
+var sum = 0;
+for (var i = 0; i < finances.length; i++) {
+    sum += finances[i][1];
+}
+console.log("Total: $" + sum);
+
+//Average Change
+// The average of the changes in Profit/Losses over the entire period.
+// calculate each change by subtracting the previous month from this month
+// You will need to track what the total change in profits is from month to month and then find the average.
+// (Total/total number of changes)x===> total change/(months - 1)
+// maybe put all the changes into an array? using .push(...) ?
+
+//
+var financesChanges = [
+    ['Jan-2010', 0],
+    ['Feb-2010', 116771],
+    ['Mar-2010', -662642],
+    ['Apr-2010', -391430],
+    ['May-2010', 379920],
+    ['Jun-2010', 212354],
+    ['Jul-2010', 510239],
+    ['Aug-2010', -428211],
+    ['Sep-2010', -821271],
+    ['Oct-2010', 693918],
+    ['Nov-2010', 416278],
+    ['Dec-2010', -974163],
+    ['Jan-2011', 860159],
+    ['Feb-2011', -1115009],
+    ['Mar-2011', 1033048],
+    ['Apr-2011', 95318],
+    ['May-2011', -308093],
+    ['Jun-2011', 99052],
+    ['Jul-2011', -521393],
+    ['Aug-2011', 605450],
+    ['Sep-2011', 231727],
+    ['Oct-2011', -65187],
+    ['Nov-2011', -702716],
+    ['Dec-2011', 177975],
+    ['Jan-2012', -1065544],
+    ['Feb-2012', 1926159],
+    ['Mar-2012', -917805],
+    ['Apr-2012', 898730],
+    ['May-2012', -334262],
+    ['Jun-2012', -246499],
+    ['Jul-2012', -64055],
+    ['Aug-2012', -1529236],
+    ['Sep-2012', 1497596],
+    ['Oct-2012', 304914],
+    ['Nov-2012', -635801],
+    ['Dec-2012', 398319],
+    ['Jan-2013', -183161],
+    ['Feb-2013', -37864],
+    ['Mar-2013', -253689],
+    ['Apr-2013', 403655],
+    ['May-2013', 94168],
+    ['Jun-2013', 306877],
+    ['Jul-2013', -83000],
+    ['Aug-2013', 210462],
+    ['Sep-2013', -2196167],
+    ['Oct-2013', 1465222],
+    ['Nov-2013', -956983],
+    ['Dec-2013', 1838447],
+    ['Jan-2014', -468003],
+    ['Feb-2014', -64602],
+    ['Mar-2014', 206242],
+    ['Apr-2014', -242155],
+    ['May-2014', -449079],
+    ['Jun-2014', 315198],
+    ['Jul-2014', 241099],
+    ['Aug-2014', 111540],
+    ['Sep-2014', 365942],
+    ['Oct-2014', -219310],
+    ['Nov-2014', -368665],
+    ['Dec-2014', 409837],
+    ['Jan-2015', 151210],
+    ['Feb-2015', -110244],
+    ['Mar-2015', -341938],
+    ['Apr-2015', -1212159],
+    ['May-2015', 683246],
+    ['Jun-2015', -70825],
+    ['Jul-2015', 335594],
+    ['Aug-2015', 417334],
+    ['Sep-2015', -272194],
+    ['Oct-2015', -236462],
+    ['Nov-2015', 657432],
+    ['Dec-2015', -211262],
+    ['Jan-2016', -128237],
+    ['Feb-2016', -1750387],
+    ['Mar-2016', 925441],
+    ['Apr-2016', 932089],
+    ['May-2016', -311434],
+    ['Jun-2016', 267252],
+    ['Jul-2016', -1876758],
+    ['Aug-2016', 1733696],
+    ['Sep-2016', 198551],
+    ['Oct-2016', -665765],
+    ['Nov-2016', 693229],
+    ['Dec-2016', -734926],
+    ['Jan-2017', 77242],
+    ['Feb-2017', 532869],
+];
+
+var cSum = 0;
+for (var i = 0; i < financesChanges.length; i++) {
+    cSum += financesChanges[i][1]/(financesChanges.length -1);
+}
+
+console.log("Average Change: $" + cSum);
+
+//Greatest Increase In Profits
+let minimum = Infinity;
+let maximum = -Infinity;
+
+for (let number of financesChanges) {
+  if (number > maximum);
+  maximum = number;
+
+  if (number < minimum);
+  minimum = number;
+}
+
+console.log("Greatest Increase In Profits: " + maximum);
+//Greatest Decrease In Profits
+console.log("Greatest Decrease In Profits: " + minimum);
 
 
 
-// The greatest increase in profits (date and amount) over the entire period.
-    // start with 0
-    //   check the last increase. If it's bigger than 0, keep track of the new biggest one.
-    //   in a loop
-    // The greatest decrease in losses (date and amount) over the entire period.
-
-
-6: 26
-An example of calculating the average change over the first 5 months.
-var finances = [
-    ['Jan-2010', 867884], // A
-    ['Feb-2010', 984655], // B
-    ['Mar-2010', 322013], // C
-    ['Apr-2010', -69417], // D
-    ['May-2010', 310503]  // E
-To calculate the average change, I need to
-1. calculate the change from month to month
-2.    ....for each month
-    First change is B - A: 984655 - 867884 =  116771
-    Next  change is C - B: 322013 - 984655 = -662642
-    Next  change is D - C: -69417 - 322013 = -391430
-    Next  change is E - D: 310503 - -69417 =  379920
-3. Add all those changes together
-116771 + -662642 + -391430 + 379920 = -557381
-4. Divide by the total number of changes I calculated
-    - 557381 / 4 = -139345.25
-New
-6: 31
-OOH! How do I reference a value in a TWO - DIMENSIONAL array ?
-    A two - dimensional array is an array that contains arrays.Like this:
-var myArray = [["Dan", 10], ["Tucker", 42], ["Hunter", 666], ["Andrew", 99]];
-
-
-
-
-
-6: 31
-If I use bracket notation, I can grab an individual element.
-    myArray[2] is["Hunter", 666]
+// Financial Analysis
+// ----------------------------
+//Total Months: 86
+//Total: $38382578
+//Average  Change: $-2315.12
+//Greatest Increase in Profits: Feb-2012 ($1926159)
+//Greatest Decrease in Profits: Sep-2013 ($-2196167)
