@@ -210,26 +210,20 @@ for (var i = 0; i < financesChanges.length; i++) {
 console.log("Average Change: $" + cSum);
 
 //Greatest Increase In Profits
+let minimum = Infinity;
+let maximum = -Infinity;
 
+for (let number of financesChanges) {
+  if (number > maximum);
+  maximum = number;
 
-function getMinMaxForLoop(arr) {
-    let maximum = arr[0];
-    let minimum = arr[0];
-    for (let i = 0; i < arr.length; i++) {
-        if (maximum < arr[i]) {
-            maximum = arr[i];
-        } else {
-            minimum = arr[i];
-        }
+  if (number < minimum);
+  minimum = number;
+}
 
-    }
-    let result = ([maximum, minimum]);
-    return result;
-};
-console.log('Greatest Increase In Profits : ' + getMinMaxForLoop(financesChanges))
-
-
+console.log("Greatest Increase In Profits: " + maximum);
 //Greatest Decrease In Profits
+console.log("Greatest Decrease In Profits: " + minimum);
 
 
 
