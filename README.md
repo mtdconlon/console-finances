@@ -27,7 +27,7 @@ The task is to write JavaScript code that analyzes the records to calculate each
 
 ## Deployment Links
 **Submission URL**
-- 
+- https://mtdconlon.github.io/console-finances/
 
 **GitHub Repo URL**
 - https://github.com/mtdconlon/console-finances
