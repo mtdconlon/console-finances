@@ -213,22 +213,20 @@ console.log("Average Change: $" + cSum);
 
 
 
-
-
-
 //Greatest Increase In Profits Starts
 
-const arr = financesChanges;
+var arr = financesChanges;
 
-const max = arr.reduce((a, b) => a[1] >= b[1] ? a : b);
-const min = arr.reduce((a, b) => a[1] <= b[1] ? a : b);
+var max = arr.reduce((a, b) => a[1] >= b[1] ? a : b);
+var min = arr.reduce((a, b) => a[1] <= b[1] ? a : b);
 
 console.log(`Greatest Increase in Profits: ${max}`);
 //Greatest Increase In Profits Ends
 
-//Greatest Decrease In Profits Starts
 
-console.log(`Greatest Decrease in Profits:: ${min}`)
+
+//Greatest Decrease In Profits Starts
+console.log(`Greatest Decrease in Profits: ${min}`)
 //Greatest Decrease In Profits Ends
 
 

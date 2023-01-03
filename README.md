@@ -33,11 +33,8 @@ The task is to write JavaScript code that analyzes the records to calculate each
 - https://github.com/mtdconlon/console-finances
 
 ## Screenshot
-Full Size Webpage Screenshot
-![example image](/images/fullsize_webpage_screenshot.png)
-
-Mobile Size Webpage Screenshot
-![example image](/images/mobile_size_webpage.png)
+Webpage Screenshot
+![example image](/assets/images/console_finances_screenshot.png)
 
 ## License
 The licence assigned to this project is GPL-3.0 license.
