@@ -205,32 +205,31 @@ var financesChanges = [
 
 var cSum = 0;
 for (var i = 0; i < financesChanges.length; i++) {
-    cSum += financesChanges[i][1]/(financesChanges.length -1);
+    cSum += financesChanges[i][1] / (financesChanges.length - 1);
 }
 
 console.log("Average Change: $" + cSum);
 //Average Change Ends
 
 
+
+
+
+
 //Greatest Increase In Profits Starts
-let minimum = Infinity;
-let maximum = -Infinity;
 
-for (let number of financesChanges) {
-  if (number > maximum);
-  maximum = number;
+const arr = financesChanges;
 
-  if (number < minimum);
-  minimum = number;
-}
+const max = arr.reduce((a, b) => a[1] >= b[1] ? a : b);
+const min = arr.reduce((a, b) => a[1] <= b[1] ? a : b);
 
+console.log(`Greatest Increase in Profits: ${max}`);
 //Greatest Increase In Profits Ends
 
-console.log("Greatest Increase In Profits: " + maximum);
 //Greatest Decrease In Profits Starts
-console.log("Greatest Decrease In Profits: " + minimum);
-//Greatest Decrease In Profits Ends
 
+console.log(`Greatest Decrease in Profits:: ${min}`)
+//Greatest Decrease In Profits Ends
 
 
 // Financial Analysis
